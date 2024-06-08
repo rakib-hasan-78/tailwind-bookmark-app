@@ -25,3 +25,33 @@ if (localStorage.getItem('color-theme')==='dark' ||(!('color-theme' in localStor
     darkIcon.classList.remove('hidden');
     updateLogo(false);
 }
+btn.addEventListener('click', (e)=>{
+    e.preventDefault();
+
+    darkIcon.classList.toggle('hidden');
+    lightIcon.classList.toggle('hidden');
+
+    if (localStorage.getItem('color-theme')) {
+
+        if (localStorage.getItem('color-theme')==='light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+            updateLogo(true)
+        }   else{
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+            updateLogo(false);
+        }
+        
+    }   else{
+        if (document.documentElement.classList.add('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light')
+            updateLogo(false);
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+            updateLogo(true)
+        }
+    }
+})
