@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hamburger{
+    transition:all 150ms ease-in-out;
+}
+.bar-top,
+.bar-middle,
+.bar-bottom{
+    position:absolute;
+    content:'';
+    left:0;
+    top:0;
+    width:25px;
+    height:3px;
+    transform:rotate(0);
+    transition: 200ms all ease-in-out;
+}
+.bar-middle{
+    top:7px;
+}
+.bar-bottom{
+    top:14px;
+}
