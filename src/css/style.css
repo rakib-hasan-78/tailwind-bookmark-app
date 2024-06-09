@@ -24,3 +24,22 @@
 .bar-bottom{
     top:14px;
 }
+
+
+
+/* bg-hero */
+
+@media screen(lg){
+    .bg-hero{
+        width:2000px;
+        height:300px;
+        left:30%;
+        @apply absolute rounded-l-full top-28 bg-softBlue;
+    }
+    .bg-tabs{
+        width:2000px;
+        height:300px;
+        right:60%;
+        @apply absolute rounded-r-full top-72 bg-softBlue;
+    }
+}
