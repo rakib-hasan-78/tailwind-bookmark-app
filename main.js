@@ -55,3 +55,33 @@ btn.addEventListener('click', (e)=>{
         }
     }
 })
+
+
+const tabs = document.querySelectorAll('.tab');
+const data = document.querySelectorAll('.data');
+const line = document.querySelectorAll('.line');
+[...tabs].forEach(tab=>{
+
+    tab.addEventListener('click',(e)=>{
+        [...tabs].forEach((tab) => {
+            tab.children[0].classList.remove(
+                'border-b',
+                'border-b-4',
+                'md:border-b-0'
+            )
+        })
+
+        ;[...data].forEach(value => {
+            value.classList.add('hidden');
+        })
+
+        e.target.classList.add(
+            'border-b-4',
+            'border-softRed'
+        )
+        const classString = e.target.getAttribute('data-target')
+        document.getElementById('data').getElementsByClassName(classString)[0];
+        document.getElementById('data').getElementsByClassName(classString)[0].classList.remove('hidden');
+        document.getElementById('data').getElementsByClassName(classString)[0].classList.add('flex');
+    })
+})
