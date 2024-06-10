@@ -21,6 +21,9 @@ export default {
       },
       fontFamily:{
         sans:['Rubik', 'sans-serif']
+      },
+      backgroundImage:{
+        dots : "url('./src/images/bg-dots.svg')"
       }
     },
   },
