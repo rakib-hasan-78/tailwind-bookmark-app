@@ -44,7 +44,7 @@ btn.addEventListener('click', (e)=>{
         }
         
     }   else{
-        if (document.documentElement.classList.add('dark')) {
+        if (document.documentElement.classList.contains('dark')) {
             document.documentElement.classList.remove('dark');
             localStorage.setItem('color-theme', 'light')
             updateLogo(false);
