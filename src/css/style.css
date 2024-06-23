@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,11 +7,14 @@
 #hamburger{
     transition:all 150ms ease-in-out;
 }
+.burger{
+    right:45px;
+}
 .bar-top,
 .bar-middle,
 .bar-bottom{
     position:absolute;
-    content:'';
+    content:' ';
     left:0;
     top:0;
     width:25px;
@@ -23,6 +27,26 @@
 }
 .bar-bottom{
     top:14px;
+}
+.open{
+    transform: rotate(90deg);
+    transform:translateY(0deg);
+    position:fixed;
+    top:8px;
+    right:45px;
+}
+.open .bar-top{
+    transform:rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .bar-middle{
+    display:none;
+}
+.open .bar-bottom{
+    transform: rotate(-45deg) translateY(-5px) translateX(3px);
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(5px);
 }
 
 .ficon:hover{

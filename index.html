@@ -8,10 +8,10 @@
   </head>
   <body class="bg-rose-50 dark:bg-slate-800 text-font-sans text-gray-900 dark:text-white">
     <header id="header">
-      <div class="container max-w-7xl p-5 mx-auto mt-5">
-        <div class="flex items-center justify-between space-x-10  my-3">
+      <div class="container max-w-7xl p-5 mx-auto mt-0 md:mt-5 bg-black opacity-70  md:bg-transparent fixed md:relative z-50 backdrop-blur">
+        <div class="flex items-center justify-between space-x-10  my-3 ">
           <!-- logo section -->
-           <div class="z-30">
+           <div class="z-30 fixed md:relative">
               <a href="#">
                 <img src="./src/images/logo-bookmark.svg" alt="company-logo" id="logo"
                 data-light-logo="./src/images/logo-bookmark.svg" data-dark-logo="./src/images/logo-bookmark-dark.svg"
@@ -21,10 +21,10 @@
            <!-- nav and darkmode section  -->
             <div class="flex space-x-10 items-center">
               <!-- hamburger icon  -->
-               <div id="hamburger" class="relative m-3 z-40 cursor-pointer focus:outline-none -top-3 md:hidden">
-                  <span class="bar-top bg-black dark:bg-rose-50"></span>
-                  <span class="bar-middle bg-black dark:bg-rose-50"></span>
-                  <span class="bar-bottom bg-black dark:bg-rose-50"></span>
+               <div id="hamburger" class="relative m-3 z-30 cursor-pointer focus:outline-none left-80  -top-3 md:hidden">
+                  <span class="bar-top bg-darkishBlue dark:bg-rose-50"></span>
+                  <span class="bar-middle bg-darkishBlue dark:bg-rose-50"></span>
+                  <span class="bar-bottom bg-darkishBlue dark:bg-rose-50"></span>
                </div>
                <nav id="nav-bar" class="hidden items-center md:flex space-x-10 uppercase ">
                   <a href="#features"
@@ -43,12 +43,12 @@
                   faq
                 </a>
                 <a href="" class="px-8 py-2 border-2 border-softRed bg-softRed text-white transition-all duration-150 hover:bg-white hover:text-softRed rounded-lg ease-in-out">login</a>
-               </nav>
+                </nav>
                <button id="btn-toggle"
                         type="button"
-                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700
+                        class="z-30 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700
                         focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700
-                        rounded-lg transition-all duration-200 text-sm relative -top-1"
+                        rounded-lg transition-all duration-200 text-sm fixed md:relative top-8 right-5 md:-top-1 "
                >
                         <!-- light icon  -->
                         <svg
@@ -79,6 +79,14 @@
                </button>
             </div>
         </div>
+          <!-- mobile menue -->
+          <div class="fixed inset-0 z-20 w-full h-full min-h-screen px-6 pt-24 py-1 bg-darkishBlue opacity-90 hidden flex-col self-end text-rose-50 uppercase tracking-widest">
+            <div class="w-full flex flex-col items-center justify-center py-10 text-center space-y-6">
+              <a href="#features" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">features</a>
+              <a href="#download" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">download</a>
+              <a href="#faq" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">faq</a>
+            </div>
+          </div>
       </div>
     </header>
     <section id="hero" class="overflow-x-hidden">
@@ -108,7 +116,7 @@
            <!-- hero image section -->
             <div class="relative mx-auto lg:w-1/2">
               <div class="bg-hero"></div>
-              <img src="./src/images/illustration-hero.svg" alt="illustration-hero" class="relative z-40 lg:top-20 xl:top-0">
+              <img src="./src/images/illustration-hero.svg" alt="illustration-hero" class="relative z-10 lg:top-20 xl:top-0">
             </div>
         </div>
       </div>
