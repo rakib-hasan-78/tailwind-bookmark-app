@@ -7,9 +7,7 @@
 #hamburger{
     transition:all 150ms ease-in-out;
 }
-.burger{
-    right:45px;
-}
+
 .bar-top,
 .bar-middle,
 .bar-bottom{
@@ -33,7 +31,8 @@
     transform:translateY(0deg);
     position:fixed;
     top:8px;
-    right:45px;
+    right:48px;
+    
 }
 .open .bar-top{
     transform:rotate(45deg) translateY(6px) translateX(6px);

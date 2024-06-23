@@ -21,7 +21,7 @@
            <!-- nav and darkmode section  -->
             <div class="flex space-x-10 items-center">
               <!-- hamburger icon  -->
-               <div id="hamburger" class="relative m-3 z-30 cursor-pointer focus:outline-none left-80  -top-3 md:hidden">
+               <div id="hamburger" class="fixed right-14 m-3 z-30 cursor-pointer focus:outline-none  md:-top-3 md:hidden">
                   <span class="bar-top bg-darkishBlue dark:bg-rose-50"></span>
                   <span class="bar-middle bg-darkishBlue dark:bg-rose-50"></span>
                   <span class="bar-bottom bg-darkishBlue dark:bg-rose-50"></span>
@@ -42,11 +42,11 @@
                   >
                   faq
                 </a>
-                <a href="" class="px-8 py-2 border-2 border-softRed bg-softRed text-white transition-all duration-150 hover:bg-white hover:text-softRed rounded-lg ease-in-out">login</a>
+                <a href="#" class="px-8 py-2 border-2 border-softRed bg-softRed text-white transition-all duration-150 hover:bg-white hover:text-softRed rounded-lg ease-in-out">login</a>
                 </nav>
                <button id="btn-toggle"
                         type="button"
-                        class="z-30 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700
+                        class=" text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700
                         focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700
                         rounded-lg transition-all duration-200 text-sm fixed md:relative top-8 right-5 md:-top-1 "
                >
@@ -79,15 +79,15 @@
                </button>
             </div>
         </div>
-          <!-- mobile menue -->
-          <div class="fixed inset-0 z-20 w-full h-full min-h-screen px-6 pt-24 py-1 bg-darkishBlue opacity-90 hidden flex-col self-end text-rose-50 uppercase tracking-widest">
-            <div class="w-full flex flex-col items-center justify-center py-10 text-center space-y-6">
-              <a href="#features" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">features</a>
-              <a href="#download" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">download</a>
-              <a href="#faq" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">faq</a>
-            </div>
-          </div>
       </div>
+        <!-- mobile menue -->
+        <div id="mobile-menu" class="hidden fixed inset-0 z-20 w-full h-full min-h-screen px-6 pt-24 py-1 bg-darkishBlue opacity-90  flex-col self-end text-rose-50 uppercase tracking-widest">
+          <div class="w-full flex flex-col items-center justify-center py-10 text-center space-y-6">
+            <a href="#features" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">features</a>
+            <a href="#download" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">download</a>
+            <a href="#faq" class="text-rose-50 duration-200 ease-in-out transition hover:text-softRed font-semibold uppercase">faq</a>
+          </div>
+        </div>
     </header>
     <section id="hero" class="overflow-x-hidden">
       <div class="container max-w-7xl mx-auto">
