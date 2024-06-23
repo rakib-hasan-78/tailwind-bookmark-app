@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -434,15 +434,41 @@
             <!-- input container -->
              <div class="flex flex-col items-center justify-center md:flex-row mx-auto md:mx-0 space-y-5 md:space-y-0 md:space-x-5 pb-14">
                 <input id="input-field" type="text" class="px-10 pt-4 pb-3 text-base text-gray-500 rounded-lg border-1 border-white focus:outline-none placeholder:text-softRed placeholder:font-semibold placeholder:font-serif placeholder:text-center md:placeholder:text-left text-center md:text-left" placeholder="email@mail.com">
-                <input id="btn-submit" class="p-3 px-10 text-lg capitalize font-semibold rounded-lg focus:outline-none bg-softRed text-center flex items-center justify-center cursor-pointer" type="submit" value="submit">
+                <input id="btn-submit" class="p-3 px-10 text-lg capitalize font-semibold rounded-lg focus:outline-none bg-softRed text-center flex items-center justify-center cursor-pointer ease duration-200 transition hover:opacity-85" type="submit" value="submit">
              </div>
           </form>
         </div>
       </div>
     </section>
     <!-- footer starts -->
-    <footer id="footer" class="bg-darkishBlue py-16">
+    <footer id="footer" class="bg-darkishBlue pt-16 py-3">
+      <div class="container max-w-7xl mx-auto">
+        <div class="flex flex-col space-y-10 md:flex-row md:space-y-0 justify-between items-center">
+          <!-- logo  & menu-->
+           <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-16">
+            <img src="./src/images/logo-bookmark-footer.svg" alt="logo-footer" class="mb-1 cursor-pointer">
+            <!-- menus  -->
+             <a href="#features" class="uppercase text-grayishBlue duration-200 ease-out hover:text-softRed text-center">features</a>
+             <a href="#download" class="uppercase text-grayishBlue duration-200 ease-out hover:text-softRed text-center">download</a>
+             <a href="#faq" class="uppercase text-grayishBlue duration-200 ease-out hover:text-softRed text-center">faq</a>
+           </div>
+           <!-- social links  -->
+            <div class="flex space-x-6">
+              <a href="#">
+                <img src="./src/images/icon-facebook.svg" alt="icon-facebook" class="h-6 duration-200 transition-all ease-linear ficon">
+              </a>
+              <a href="#">
+                <img src="./src/images/icon-twitter.svg" alt="icon-facebook" class="h-6 duration-200 transition-all ease-linear ficon">
+              </a>
+            </div>
+        </div>
+        <!-- copyrights  -->
+         <div class="container max-w-xl mx-auto text-grayishBlue mt-10 flex flex-col text-center text-xs">
+          <span id="copy-right"></span>
+          <span id="credit">poet</span>
+         </div>
 
+      </div>
     </footer>
   <script type="module" src="/main.js"></script>
   </body>
