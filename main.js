@@ -13,8 +13,6 @@ const operationMsg = document.getElementById('subscription-description');
 
 
 const validation = (userMail) => {
-    let mail = userMail.value.trim();
-    let mailValidate = emailValidator(mail);
     
     operationTitle.innerText = "";
     operationMsg.innerText = "";
@@ -22,6 +20,10 @@ const validation = (userMail) => {
     operationMsg.classList.remove('text-red-500', 'text-green-500');
     inputBtn.disabled = false;
     inputBtn.classList.remove('cursor-not-allowed', 'cursor-pointer');
+
+    let mail = userMail.value.trim();
+    let mailValidate = emailValidator(mail);
+
     if (mail===``) {
         operationTitle.classList.add('text-red-400');
         operationTitle.innerText=`fatal error !`
