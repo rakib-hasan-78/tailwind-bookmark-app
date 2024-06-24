@@ -15,11 +15,20 @@ const operationMsg = document.getElementById('subscription-description');
 const validation = (userMail) => {
     let mail = userMail.value.trim();
     let mailValidate = emailValidator(mail);
+    
+    operationTitle.innerText = "";
+    operationMsg.innerText = "";
+    operationTitle.classList.remove('text-red-400', 'text-green-400');
+    operationMsg.classList.remove('text-red-500', 'text-green-500');
+    inputBtn.disabled = false;
+    inputBtn.classList.remove('cursor-not-allowed', 'cursor-pointer');
     if (mail===``) {
         operationTitle.classList.add('text-red-400');
         operationTitle.innerText=`fatal error !`
         operationMsg.classList.add(`text-red-900`);
         operationMsg.innerText= `empty data !`;
+        inputBtn.disabled = true;
+        inputBtn.classList.add('cursor-not-allowed');
         return;
     }
     if (!(mailValidate.isValid)) {
@@ -28,6 +37,7 @@ const validation = (userMail) => {
         operationMsg.classList.add(`text-red-500`);
         operationMsg.innerText= ``;
         operationMsg.innerText= mailValidate.errors;
+
         inputBtn.disabled = true;
         inputBtn.classList.add('cursor-not-allowed');
     } else{
@@ -43,7 +53,7 @@ const validation = (userMail) => {
             operationMsg.innerText = "";
             operationTitle.classList.remove('text-green-400');
             operationMsg.classList.remove('text-green-500');
-        }, 2000);
+        }, 4000);
     }
 }
 
